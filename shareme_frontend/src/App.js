@@ -10,13 +10,13 @@ const App = () => {
         const user = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
 
         if(!user) navigate('/login');
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+        
+    });
     
 
     return (
         <Routes>
-            <Route path="login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/*" element={<Home />} />
         </Routes>
     )
