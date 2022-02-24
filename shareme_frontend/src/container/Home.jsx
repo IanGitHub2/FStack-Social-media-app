@@ -21,8 +21,9 @@ const Home = () => {
 
         client.fetch(query).then((data) => {
         setUser(data[0]);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
