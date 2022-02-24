@@ -24,4 +24,4 @@ const Pins = ({ user }) => {
     )
 }
 
-export default Pins
+export default Pins;
