@@ -15,7 +15,7 @@ const PinDetail = ({ user }) => {
     const [addingComment, setAddingComment] = useState(false);
     const { pinId } = useParams();
 
-    const fetchPinDetails = (() => {
+    const fetchPinDetails = () => {
         let query = pinDetailQuery(pinId);
 
         if(query) {
@@ -31,10 +31,11 @@ const PinDetail = ({ user }) => {
                     }
                 })
         }
-    }, [])
+    }
 
     useEffect(() => {
         fetchPinDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pinId]);
     
 
